@@ -65,7 +65,7 @@ program
         console.log(result);
     });
 
-
+//TIME
 program
     .command("time")
     .action(() => {
@@ -86,7 +86,9 @@ program
         console.log(text.toLowerCase());
     });
 
+// APIS 
 
+//Random Qoute
 program
     .command("quote")
     .action(async () => {
@@ -100,6 +102,7 @@ program
     });
 
 
+//Random Advice
 program
     .command("advice")
     .action(async () => {
@@ -110,3 +113,4 @@ program
             console.log("Could not fetch advice");
         }
     });
+

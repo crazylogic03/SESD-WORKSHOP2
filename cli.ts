@@ -85,3 +85,28 @@ program
     .action((text) => {
         console.log(text.toLowerCase());
     });
+
+
+program
+    .command("quote")
+    .action(async () => {
+        try {
+            const res = await axios.get("https://api.quotable.io/random");
+            console.log(`"${res.data.content}"`);
+            console.log(`- ${res.data.author}`);
+        } catch {
+            console.log("Could not fetch quote");
+        }
+    });
+
+
+program
+    .command("advice")
+    .action(async () => {
+        try {
+            const res = await axios.get("https://api.adviceslip.com/advice");
+            console.log(res.data.slip.advice);
+        } catch {
+            console.log("Could not fetch advice");
+        }
+    });

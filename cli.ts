@@ -53,3 +53,14 @@ program
     })
 
 program.parse()
+
+
+// 1 Random Number
+program
+    .command("random <min> <max>")
+    .action((min, max) => {
+        const result =
+            Math.floor(Math.random() * (Number(max) - Number(min) + 1)) +
+            Number(min);
+        console.log(result);
+    });

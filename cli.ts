@@ -64,3 +64,24 @@ program
             Number(min);
         console.log(result);
     });
+
+
+program
+    .command("time")
+    .action(() => {
+        console.log(new Date().toLocaleString());
+    });
+
+// 3 Uppercase
+program
+    .command("uppercase <text>")
+    .action((text) => {
+        console.log(text.toUpperCase());
+    });
+
+// 4 Lowercase
+program
+    .command("lowercase <text>")
+    .action((text) => {
+        console.log(text.toLowerCase());
+    });

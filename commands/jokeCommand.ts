@@ -1,6 +1,9 @@
-class JokeCommand {
-    program;
-    constructor(program) {
+import axios from 'axios';
+
+export default class JokeCommand {
+    program: any;
+
+    constructor(program: any) {
         this.program = program;
     }
 
@@ -17,9 +20,7 @@ class JokeCommand {
             console.log(res.data.setup);
             console.log(res.data.punchline);
         } catch (err) {
-            if (err) {
-                console.log(err);
-            }
+            console.log(err);
         }
     }
 }

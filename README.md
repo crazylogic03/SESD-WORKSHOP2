@@ -1,4 +1,4 @@
-# TypeScript CLI Tool
+# PART-1: TypeScript CLI Tool
 
 A custom Command Line Interface (CLI) built using:
 
@@ -167,3 +167,42 @@ project/
 - Internet connection required for API commands.
 
 ---
+
+# PART-2: Modular CLI Engine Architecture
+
+The project has been refactored to use a modular `CLI_Engine` pattern. Each command is now encapsulated into its own class, making the CLI highly scalable and easy to maintain.
+
+## 📁 Updated Project Structure
+
+```
+project/
+│
+├── cli.ts (Main entry point)
+├── cliEngine/
+│   └── cli_engine.ts (Core engine that registers commands)
+├── commands/ (All modular commands)
+│   ├── addCommand.ts
+│   ├── greetCommand.ts
+│   ├── jokeCommand.ts
+│   ├── subtractCommand.ts
+│   ├── multiplyCommand.ts
+│   ├── divideCommand.ts
+│   ├── randomCommand.ts
+│   ├── timeCommand.ts
+│   ├── uppercaseCommand.ts
+│   ├── quoteCommand.ts
+│   ├── adviceCommand.ts
+│   ├── catFactCommand.ts
+│   └── ipCommand.ts
+├── package.json
+└── tsconfig.json
+```
+
+## 🚀 Engine Features
+- **Object-Oriented Design**: Each command is an isolated class that encapsulates its arguments, logic, and Commander actions.
+- **Easy to Extend**: To add new commands, simply create a new class in `commands/` and pass it to `engine.registerCommands([])` in `cli.ts`.
+- **New Included APIs**:
+  - `quote`: Fetches a random quote using the Quotable API.
+  - `advice`: Fetches a random piece of advice.
+  - `catfact`: Fetches a random cat fact using Catfact Ninja.
+  - `ip`: Fetches your current public IP address via IPify.

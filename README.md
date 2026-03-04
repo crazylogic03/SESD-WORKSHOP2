@@ -172,7 +172,9 @@ project/
 
 The project has been refactored to use a modular `CLI_Engine` pattern. Each command is now encapsulated into its own class, making the CLI highly scalable and easy to maintain.
 
-## 📁 Updated Project Structure
+---
+
+# 🛠 Updated Project Structure
 
 ```
 project/
@@ -198,11 +200,44 @@ project/
 └── tsconfig.json
 ```
 
-## 🚀 Engine Features
+---
+
+# Available Commands (Engine Configured)
+
+## Calculator
+
+| Command | Description |
+|----------|-------------|
+| `greet <name>` | Greet user using the Chalk library |
+| `add <n1> <n2>` | Add numbers |
+| `subtract <n1> <n2>` | Subtract numbers |
+| `multiply <n1> <n2>` | Multiply numbers |
+| `divi <n1> <n2>` | Divide numbers |
+
+---
+
+## 🔤 Text & Utility
+
+| Command | Description |
+|----------|-------------|
+| `random <min> <max>` | Random number generator |
+| `time` | Current date & time |
+| `uppercase <text>` | Convert to uppercase |
+
+---
+
+## 🌍 Engine API Commands
+
+| Command | Description |
+|----------|-------------|
+| `joke` | Random joke (via Joke API) |
+| `quote` | Random quote (via Quotable API) |
+| `advice` | Random advice (via AdviceSlip API) |
+| `catfact` | Random cat fact (via CatFact Ninja) |
+| `ip` | Public IP Address (via IPify) |
+
+---
+
+# 🚀 Engine Features
 - **Object-Oriented Design**: Each command is an isolated class that encapsulates its arguments, logic, and Commander actions.
 - **Easy to Extend**: To add new commands, simply create a new class in `commands/` and pass it to `engine.registerCommands([])` in `cli.ts`.
-- **New Included APIs**:
-  - `quote`: Fetches a random quote using the Quotable API.
-  - `advice`: Fetches a random piece of advice.
-  - `catfact`: Fetches a random cat fact using Catfact Ninja.
-  - `ip`: Fetches your current public IP address via IPify.

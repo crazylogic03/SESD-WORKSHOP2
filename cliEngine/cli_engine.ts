@@ -1,6 +1,6 @@
 import { Command } from "commander";
 
-export default class CLI_Engine {
+class CLI_Engine {
     program: Command;
 
     constructor() {
@@ -18,3 +18,4 @@ export default class CLI_Engine {
         this.program.parse();
     }
 }
+export = CLI_Engine;

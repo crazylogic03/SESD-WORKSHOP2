@@ -1,4 +1,4 @@
-export default class AddCommand {
+class AddCommand {
     program: any;
 
     constructor(program: any) {
@@ -15,3 +15,4 @@ export default class AddCommand {
         console.log(Number(n1) + Number(n2));
     }
 }
+export = AddCommand;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default class JokeCommand {
+class JokeCommand {
     program: any;
 
     constructor(program: any) {
@@ -24,3 +24,4 @@ export default class JokeCommand {
         }
     }
 }
+export = JokeCommand;
